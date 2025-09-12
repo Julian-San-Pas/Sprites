@@ -15,6 +15,10 @@ public class PasoNivel : MonoBehaviour
     {
         SceneManager.LoadScene(2);
     }
+    public void LoadNivle3()
+    {
+        SceneManager.LoadScene(3);
+    }
     public void NextLevel() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
