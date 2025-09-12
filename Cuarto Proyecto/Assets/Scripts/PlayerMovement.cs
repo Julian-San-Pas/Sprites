@@ -1,0 +1,18 @@
+using UnityEngine;
+
+public class PlayerMovement : MonoBehaviour
+{
+   
+    public float speed = 5f;
+
+    void Start()
+    {
+    }
+    void Update()
+    {        
+        float moveHorizontal = Input.GetAxis("Horizontal")*Time.deltaTime;
+        float moveVertical = Input.GetAxis("Vertical");
+        Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
+        transform.Translate(movement * speed * Time.deltaTime, Space.World);
+    }
+}
